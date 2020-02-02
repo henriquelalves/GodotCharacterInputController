@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "InputUI",
+"language": "GDScript",
+"path": "res://addons/character_input_controller/input_controller_ui.gd"
+} ]
+_global_script_class_icons={
+"InputUI": ""
+}
+
+[application]
+
+config/name="CharacterInputController"
+config/description="Character Input Controller addon project"
+run/main_scene="res://Demo.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "character_input_controller" )
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation.mobile=2
+vram_compression/import_etc=true
+quality/directional_shadow/size.mobile=4096
+quality/shadow_atlas/size.mobile=4096
+quality/shadows/filter_mode.mobile=1
+quality/shading/force_vertex_shading.mobile=false
+quality/depth/hdr.mobile=true
+environment/default_environment="res://default_env.tres"

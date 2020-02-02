@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/character_input_controller/input_controller.gd" type="Script" id=1]
+[ext_resource path="res://Demo.gd" type="Script" id=2]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Demo" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Plane" type="MeshInstance" parent="World"]
+transform = Transform( 10, 0, 0, 0, -4.37114e-07, 1, 0, -10, -4.37114e-08, 0, -0.254067, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Box" type="MeshInstance" parent="World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.734946, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="SpotLight" type="SpotLight" parent="World"]
+transform = Transform( 1, 0, 0, 0, 0.9209, 0.389799, 0, -0.389799, 0.9209, 0, 2.72747, 3.13477 )
+shadow_enabled = true
+spot_range = 15.7485
+
+[node name="Yaw" type="Spatial" parent="World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28893, 3.08359, 2.82327 )
+
+[node name="Pitch" type="Spatial" parent="World/Yaw"]
+
+[node name="Camera" type="Camera" parent="World/Yaw/Pitch"]
+
+[node name="CharacterInputController" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
