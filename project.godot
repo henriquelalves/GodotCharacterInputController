@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="CharacterInputController"
 config/description="Character Input Controller addon project"
-run/main_scene="res://Demo.tscn"
+run/main_scene="res://2DDemo.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

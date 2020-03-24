@@ -1,7 +1,7 @@
 tool
 extends Control
 
-var input_controller_ui = preload("res://addons/character_input_controller/input_controller_ui.tscn")
+var input_controller_ui = preload("input_controller_ui.tscn")
 var ui_instance
 
 signal tracking_movement
