@@ -1,4 +1,7 @@
 # Character Input Controller
+
+*For more addons, check [my GitHub](https://github.com/henriquelalves) and [my itch.io](https://perons.itch.io/) page.*
+
 A simple addon that adds a Character Input Controller node to Godot, which simulates a dual analog controller setup on touch-screen devices.
 
 ## Features
